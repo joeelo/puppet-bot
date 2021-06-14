@@ -35,6 +35,23 @@ const fillOutBillingSection = async (page) => {
 	try {
 		await page.waitForTimeout(1000);
 		await page.type('input[id="firstName"]', 'Joseph');
+		await page.waitForTimeout(1000);
+		await page.type('input[id="lastName"]', 'Lorenzo');
+		await page.waitForTimeout(1000);
+		await page.type('input[id="phone"]', '7188255168');
+		await page.waitForTimeout(1000);
+		await page.type('input[id="email"]', 'josephclorenzo@gmail.com');
+		await page.waitForTimeout(1000);
+		await page.type('input[id="addressLineOne"]', '801 A street');
+		await page.waitForTimeout(1000);
+		await page.type('input[id="addressLineTwo"]', 'Apt 2019');
+		await page.waitForTimeout(1000);
+		await page.type('input[id="city"]', 'San Diego');
+		await page.waitForTimeout(1000);
+		await page.select('input[id="state"]', 'California');
+		await page.waitForTimeout(1000);
+		await page.select('input[id="postalCode"]', '92101');
+		await page.waitForTimeout(1000);
 	} catch (error) {
         console.log("🚀 ~ file: bot.js ~ line 38 ~ fillOutBillingSection ~ error", error)
 	}
